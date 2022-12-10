@@ -1,0 +1,3 @@
+per-7.function.py-ignores =
+     test/*: D103
+     
