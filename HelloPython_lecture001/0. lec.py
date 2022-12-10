@@ -1,0 +1,2 @@
+"""Doc."""
+print('hello world')
