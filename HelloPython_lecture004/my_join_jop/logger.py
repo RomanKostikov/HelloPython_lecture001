@@ -4,6 +4,7 @@ from datetime import datetime as dt
 
 
 def temperature_logger(data):
+    """Doc."""
     time = dt.now().strftime('%H:%M')
     with open('log.csv', 'a') as file:
         file.write('{};temperature;{}\n'
@@ -11,6 +12,7 @@ def temperature_logger(data):
 
 
 def pressure_logger(data):
+    """Doc."""
     time = dt.now().strftime('%H:%M')
     with open('log.csv', 'a') as file:
         file.write('{};pressure;{}\n'
@@ -18,6 +20,7 @@ def pressure_logger(data):
 
 
 def wind_speed_logger(data):
+    """Doc."""
     time = dt.now().strftime('%H:%M')
     with open('log.csv', 'a') as file:
         file.write('{};wind_speed;{}\n'

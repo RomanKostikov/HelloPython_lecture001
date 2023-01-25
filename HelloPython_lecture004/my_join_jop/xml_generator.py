@@ -5,6 +5,7 @@ from user_interface import pressure_view
 
 
 def create(device=1):
+    """Doc."""
     xml = '<xml>\n'
     xml += '   <temperature units ="c">{} </temperature>\n'\
         .format(temperature_view(device))
@@ -24,6 +25,7 @@ def create(device=1):
 
 
 def new_create(data, device=1):
+    """Doc."""
     t, p, w = data
     t = t * 1.8 + 32
     xml = '<xml>\n'

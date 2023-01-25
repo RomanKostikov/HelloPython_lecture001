@@ -5,6 +5,7 @@ from user_interface import pressure_view
 
 
 def create(device=1):
+    """Doc."""
     style = 'style="font-size:22px;"'
     html = '<html>\n <head></head>\n <body>\n'
     html += '   <p {}>Temperature: {} c</p>\n'\
@@ -21,6 +22,7 @@ def create(device=1):
 
 
 def new_create(data, device=1):
+    """Doc."""
     t, p, w = data
     style = 'style="font-size:22px;"'
     html = '<html>\n <head></head>\n <body>\n'
