@@ -1,8 +1,9 @@
 """Doc."""
 from telegram import Update
 from telegram.ext import ContextTypes
-import datetime
+from datetime import datetime as dt
 from spy import log
+import emoji
 
 
 async def hi_command(update: Update, context:
@@ -10,6 +11,8 @@ async def hi_command(update: Update, context:
     """Doc."""
     log(update, context)
     await update.message.reply_text(f'Hi, {update.effective_user.first_name}!')
+    victory = emoji.emojize(':victory_hand:')
+    await update.message.reply_text(f'{victory}')
 
 
 async def help_command(update: Update, context:
@@ -24,7 +27,10 @@ async def time_command(update: Update, context:
                        ContextTypes.DEFAULT_TYPE) -> None:
     """Doc."""
     log(update, context)
-    await update.message.reply_text(f'{datetime.datetime.now().time()}')
+    time = dt.now().strftime('%H:%M')
+    await update.message.reply_text(f'Сейчас: {time}')
+    ok = emoji.emojize(':OK_hand:')
+    await update.message.reply_text(f'{ok}')
 
 
 async def sum_command(update: Update, context:
@@ -37,3 +43,5 @@ async def sum_command(update: Update, context:
     x = int(items[1])
     y = int(items[2])
     await update.message.reply_text(f'{x} + {y} = {x+y}')
+    ok = emoji.emojize(':nerd_face:')
+    await update.message.reply_text(f'{ok}')

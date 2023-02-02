@@ -1,9 +1,8 @@
 """Doc."""
 from telegram.ext import ApplicationBuilder, CommandHandler
 from bot_commands import hi_command, time_command, help_command, sum_command
-
-app = ApplicationBuilder().token(
-    "5899506735:AAGtU9VzrtuLLHgLpGaf3kgTEfF-ePqLTXY").build()
+from config import TOKEN
+app = ApplicationBuilder().token(TOKEN).build()
 
 app.add_handler(CommandHandler("hi", hi_command))
 app.add_handler(CommandHandler("time", time_command))

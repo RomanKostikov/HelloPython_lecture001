@@ -20,12 +20,14 @@
 
 # 3. demo emoji 2.2.0
 
-# import emoji
-# print(emoji.emojize('Python is :thumbs_up:'))
-
+# import matplotlib.pyplot as plt
+import emoji
+print(emoji.emojize('Python is :thumbs_up:'))
+print(emoji.emojize('Python is :OK_hand:'))
+print(emoji.emojize('Python is :victory_hand:'))
+print(emoji.emojize('Python is :nerd_face:'))
 # 4. demo matplotlib
 
-import matplotlib.pyplot as plt
 # import numpy as np
 
 # Fixing random state for reproducibility
@@ -49,7 +51,7 @@ import matplotlib.pyplot as plt
 
 # простой пример визуализации(изображение кривой)
 
-list = [1, 2, 3, 2, 7]
-plt.plot(list)
+# list = [1, 2, 3, 2, 7]
+# plt.plot(list)
 
-plt.show()
+# plt.show()
